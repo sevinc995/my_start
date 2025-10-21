@@ -3,11 +3,34 @@ body {
   font-weight: 500;
 }
 
-.menu h2 {
-  color: #c5c1be;
+.box {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
 }
-.menu h2:hover {
+.box .menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+.box .menu h2 {
+  color: #c5c1be;
+  font-size: 20px;
+  font-weight: 600;
+}
+.box .menu h2:hover {
   color: #fdfdfd;
+}
+.box .menu nav a {
+  color: #c5c1be;
+  font-size: 18px;
+  font-weight: 600;
+}
+.box .menu nav a:hover {
+  color: #fdfdfd;
+}
+.box .menu .icon {
+  display: none;
 }
 
 #favorite {
@@ -15,6 +38,8 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
+  z-index: -1;
   padding: 90px 0;
 }
 #favorite .textbox {
