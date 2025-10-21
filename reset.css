@@ -26,9 +26,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
 	display: none
-}
+} */
 ol, ul {
 	list-style: none;
 }
