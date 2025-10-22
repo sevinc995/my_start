@@ -33,9 +33,6 @@ body {
 .box .menu nav a:hover {
   color: #fdfdfd;
 }
-.box .menu .icon {
-  display: none;
-}
 
 #favorite {
   background: none;
