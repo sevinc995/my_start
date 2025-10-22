@@ -11,11 +11,6 @@ body {
   z-index: 10;
   padding: 0 65px;
 }
-.box .menu {
-  display: flex;
-  justify-content: space-between;
-  padding: 25px 50px;
-}
 .box .menu h2 {
   color: #c5c1be;
   font-size: 20px;
