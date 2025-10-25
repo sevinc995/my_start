@@ -6,7 +6,10 @@
     z-index: 10
     padding: 0 65px
     .menu
-
+        padding: 10px 30px
+        display: flex
+        align-items: center
+        justify-content: space-between
         h2
             color: #c5c1be
             font-size: 20px
@@ -14,12 +17,35 @@
             &:hover
                 color: #fdfdfd
         nav
-            a
-                color: #c5c1be
-                font-size: 17px
-                font-weight: 600
-                margin-left: 25px
-                &:hover
-                    color: #fdfdfd
+            ul
+                display: flex
+                gap: 30
+                padding: 15px
+                li
+                    list-style-type: none
+                    a
+                        color: #c5c1be
+                        font-size: 17px
+                        font-weight: 600
+                        margin-left: 25px
+                        &:hover
+                            color: #fdfdfd
+            .icon
+                display: none
+                i
+                    color: #ffff
+                    font-size: 30px
 
+@media (max-width: 768px)
+    nav 
+        ul
+            position: absolute
+            top: 70px
+            left: 0
+            right: 0
+            flex-direction: column
+            gap: 0
+            overflow: hidden
+        .icon
+            display: block
 

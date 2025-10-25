@@ -11,6 +11,12 @@ body {
   z-index: 10;
   padding: 0 65px;
 }
+.box .menu {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .box .menu h2 {
   color: #c5c1be;
   font-size: 20px;
@@ -19,16 +25,45 @@ body {
 .box .menu h2:hover {
   color: #fdfdfd;
 }
-.box .menu nav a {
+.box .menu nav ul {
+  display: flex;
+  gap: 30;
+  padding: 15px;
+}
+.box .menu nav ul li {
+  list-style-type: none;
+}
+.box .menu nav ul li a {
   color: #c5c1be;
   font-size: 17px;
   font-weight: 600;
   margin-left: 25px;
 }
-.box .menu nav a:hover {
+.box .menu nav ul li a:hover {
   color: #fdfdfd;
 }
+.box .menu nav .icon {
+  display: none;
+}
+.box .menu nav .icon i {
+  color: white;
+  font-size: 30px;
+}
 
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+  }
+  nav .icon {
+    display: block;
+  }
+}
 #favorite {
   background: none;
   position: relative;
