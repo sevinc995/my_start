@@ -6,62 +6,90 @@ body {
 .box {
   width: 100vw;
   position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 10;
   padding: 0 65px;
 }
-.box .menu {
+.box nav {
   padding: 10px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  height: 70px;
 }
-.box .menu h2 {
+.box nav h2 {
   color: #c5c1be;
   font-size: 20px;
   font-weight: 600;
 }
-.box .menu h2:hover {
+.box nav h2:hover {
   color: #fdfdfd;
 }
-.box .menu nav ul {
+.box nav ul {
   display: flex;
+  flex-direction: row;
   gap: 30;
-  padding: 15px;
 }
-.box .menu nav ul li {
+.box nav ul li {
   list-style-type: none;
 }
-.box .menu nav ul li a {
+.box nav ul li a {
   color: #c5c1be;
   font-size: 17px;
   font-weight: 600;
   margin-left: 25px;
 }
-.box .menu nav ul li a:hover {
+.box nav ul li a:hover {
   color: #fdfdfd;
 }
-.box .menu nav .icon {
+.box nav .icon {
   display: none;
 }
-.box .menu nav .icon i {
+.box nav .icon i {
   color: white;
   font-size: 30px;
 }
 
 @media (max-width: 768px) {
-  nav ul {
+  .box {
+    background-color: white;
+    position: fixed;
+  }
+  .box nav {
+    overflow: hidden;
+  }
+  .box nav h2 {
+    color: #000;
+  }
+  .box nav ul {
     position: absolute;
     top: 70px;
     left: 0;
     right: 0;
     flex-direction: column;
+    text-align: center;
     gap: 0;
-    overflow: hidden;
   }
-  nav .icon {
+  .box nav ul li {
+    padding: 20px;
+  }
+  .box nav .icon {
     display: block;
+  }
+  .box nav .icon i {
+    padding: 5px 15px;
+    color: #777575;
+    font-size: 20px;
+    line-height: 1.3;
+    border: 3px solid #777575;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .box nav .menuList {
+    transition: all 5s;
   }
 }
 #favorite {
