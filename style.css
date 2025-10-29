@@ -96,7 +96,7 @@ body {
 #favorite {
   background: none;
   position: relative;
-  padding: 90px 0;
+  padding: 90px 0 0 0;
 }
 #favorite::before {
   content: "";
@@ -184,9 +184,10 @@ body {
 
 #youneed {
   background-color: #f4623a;
-  padding: 90px 0;
+  padding: 90px 0 0 0;
 }
 #youneed .textbox {
+  paddin: 20px 0;
   max-width: 550px;
   display: flex;
   flex-direction: column;
