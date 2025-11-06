@@ -2,6 +2,9 @@ body {
   font-family: "Dosis", sans-serif;
   font-weight: 500;
 }
+body .imgbox img {
+  width: 100%;
+}
 
 .box {
   width: 100vw;
@@ -119,7 +122,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0;
   max-width: 570px;
 }
 #favorite .textbox h1 {
@@ -243,7 +245,7 @@ body {
   margin: 50px 0;
 }
 #service .box-icon .icon i {
-  font-size: 30px;
+  font-size: 35px;
   color: #f4623a;
 }
 #service .box-icon h2 {
@@ -252,7 +254,7 @@ body {
   margin: 20px 0;
 }
 #service .box-icon h4 {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.3;
-  color: #adabaa;
+  color: #8b8b8b;
 }/*# sourceMappingURL=style.css.map */
