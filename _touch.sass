@@ -1,5 +1,5 @@
 #touch
-    padding: 90px 0 
+    padding: 90px 0
     .textbox
         max-width: 500px
         display: flex
@@ -18,7 +18,7 @@
             font-size: 19px
             font-weight: 100
             line-height: 1.4
-    .input-box
+    #input-box
         max-width: 500px
         display: flex
         flex-direction: column
@@ -30,10 +30,16 @@
             height: 50px
             margin: 7px 0
             border-radius: 7px
+            &.error-border
+                border-color: red
+        .error-message
+            color: red
+            font-size: 13px
+            display: none
         textarea
             border-radius: 7px
             margin-top: 7px
-        .btn-xl
+        button
             padding: 1.25rem 14.25rem
             background-color: #f4623a
             opacity: 0.7
@@ -46,5 +52,3 @@
             font-size: 35px
             color: #8b8b8b
             margin: 40px 0 20px 0
-
-
