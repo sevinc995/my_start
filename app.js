@@ -14,6 +14,13 @@ function toggleMenu() {
 const form = document.getElementById('contact-form');
 const inputs = form.querySelectorAll('input');
 
+// form.addEventListener("keydown", function (e) {
+//     if (e.key === "Enter") {
+//         e.preventDefault();
+//         form.dispatchEvent(new Event("submit"));
+//     }
+// });
+
 inputs.forEach(input => {
     input.addEventListener('blur', () => validateField(input));
 });
