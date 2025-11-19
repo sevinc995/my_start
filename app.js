@@ -43,7 +43,7 @@ form.addEventListener("submit", function (e) {
     });
 
     if (allValid) {
-        console.log("Form is Valid!");
+        console.log("Form is Valid!")
     }
 })
 
