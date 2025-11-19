@@ -339,33 +339,33 @@ body .imgbox img {
   font-weight: 100;
   line-height: 1.4;
 }
-#touch #input-box {
+#touch #contact-form {
   max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#touch #input-box input {
+#touch #contact-form input {
   border: 0.5px solid #8b8b8b;
   width: 500px;
   height: 50px;
   margin: 7px 0;
   border-radius: 7px;
 }
-#touch #input-box input.error-border {
-  border-color: red;
+#touch #contact-form input.error-border {
+  border: 2px solid red !important;
 }
-#touch #input-box .error-message {
+#touch #contact-form .error-message {
   color: red;
   font-size: 13px;
   display: none;
 }
-#touch #input-box textarea {
+#touch #contact-form textarea {
   border-radius: 7px;
   margin-top: 7px;
 }
-#touch #input-box button {
+#touch #contact-form button {
   padding: 1.25rem 14.25rem;
   background-color: #f4623a;
   opacity: 0.7;
@@ -375,7 +375,7 @@ body .imgbox img {
   font-size: 17px;
   font-weight: 600;
 }
-#touch #input-box .icon {
+#touch #contact-form .icon {
   font-size: 35px;
   color: #8b8b8b;
   margin: 40px 0 20px 0;
