@@ -10,49 +10,42 @@ function toggleMenu() {
     }
 }
 
-    // document.getElementById("contact-form").addEventListener("submit", function (e) {
-    //     e.preventDefault();
-    //     // fullname
-    //     let nameField = document.getElementById("fullname");
-    //     let nameError = nameField.nextElementSibling;
+  
+const form = document.getElementById('contact-form');
+const inputs = form.querySelectorAll('input');
 
-
-    //     if (nameField.value.trim() === "") {
-    //         nameField.classList.add("error-border");
-    //         nameError.style.display = "block";
-    //     } else {
-    //         nameField.classList.remove("error-border");
-    //         nameError.style.display = "none";
-    //     }
-
-    //     // email
-    //     let emailField = document.getElementById("email");
-    //     let emailError = emailField.nextElementSibling;
-
-    //     if (emailField.value.trim() === "") {
-    //         emailField.classList.add("error-border");
-    //         emailError.style.display = "block";
-    //     } else {
-    //         emailField.classList.remove("error-border");
-    //         emailError.style.display = "none";
-    //     }
-
-    //     // phone
-    //     let phoneField = document.getElementById("phone");
-    //     let phoneError = phoneField.nextElementSibling;
-
-
-    //     if (phoneField.value.trim() === "") {
-    //         phoneField.classList.add("error-border");
-    //         phoneError.style.display = "block";
-    //     } else {
-    //         phoneField.classList.remove("error-border");
-    //         phoneError.style.display = "none";
-    //     }
-    // })
-
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    
-
+inputs.forEach(input => {
+    input.addEventListener('blur', () => validateField(input));
 });
+
+function validateField(input) {
+    const parent = input.parentElement;
+    const error = parent.querySelector('.error-message');
+
+    if (input.value.trim() === "") {
+        error.style.display = "block";
+        input.classList.add("error-border");
+        return false
+    }
+
+    error.style.display = "none";
+    input.classList.remove("error-border");
+    return true;
+}
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let allValid = true;
+
+    inputs.forEach(input => {
+        if (!validataField(input)) {
+            allValid = false;
+        }
+    });
+
+    if (allValid) {
+        console.log("Form is Valid!");
+    }
+})
+
+
+

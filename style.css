@@ -346,17 +346,18 @@ body .imgbox img {
   justify-content: center;
   align-items: center;
 }
-#touch #contact-form input {
+#touch #contact-form .input-box input {
   border: 0.5px solid #8b8b8b;
   width: 500px;
   height: 50px;
   margin: 7px 0;
   border-radius: 7px;
+  transition: 2s;
 }
-#touch #contact-form input.error-border {
-  border: 2px solid red !important;
+#touch #contact-form .input-box input.error-border {
+  border: 1px solid red !important;
 }
-#touch #contact-form .error-message {
+#touch #contact-form .input-box .error-message {
   color: red;
   font-size: 13px;
   display: none;

@@ -24,30 +24,32 @@
         flex-direction: column
         justify-content: center
         align-items: center
-        input
-            border: 0.5px solid #8b8b8b
-            width: 500px
-            height: 50px
-            margin: 7px 0
-            border-radius: 7px
-            &.error-border
-                border: 2px solid red !important 
-        .error-message
-            color: red
-            font-size: 13px
-            display: none
+        .input-box
+            input
+                border: 0.5px solid #8b8b8b
+                width: 500px
+                height: 50px
+                margin: 7px 0
+                border-radius: 7px
+                transition: 2s
+                &.error-border
+                    border: 1px solid red !important
+            .error-message
+                color: red
+                font-size: 13px
+                display: none
         textarea
-            border-radius: 7px
-            margin-top: 7px
+                border-radius: 7px
+                margin-top: 7px
         button
-            padding: 1.25rem 14.25rem
-            background-color: #f4623a
-            opacity: 0.7
-            border-radius: 30px
-            margin-top: 20px
-            color: #ffff
-            font-size: 17px
-            font-weight: 600
+                padding: 1.25rem 14.25rem
+                background-color: #f4623a
+                opacity: 0.7
+                border-radius: 30px
+                margin-top: 20px
+                color: #ffff
+                font-size: 17px
+                font-weight: 600
         .icon
             font-size: 35px
             color: #8b8b8b
