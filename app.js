@@ -10,49 +10,64 @@ function toggleMenu() {
     }
 }
 
-  
-const form = document.getElementById('contact-form');
-const inputs = form.querySelectorAll('input');
+$(document).ready(function() {
 
-// form.addEventListener("keydown", function (e) {
-//     if (e.key === "Enter") {
-//         e.preventDefault();
-//         form.dispatchEvent(new Event("submit"));
-//     }
-// });
+    const form = $('#contact-form')[0];
+    const inputs = $('#contact-form input');
 
-inputs.forEach(input => {
-    input.addEventListener('blur', () => validateField(input));
-});
+    function validateField(input) {
+        const parent = $(input).closest('.input-box');
+        const error = parent.find('.error-message');
 
-function validateField(input) {
-    const parent = input.parentElement;
-    const error = parent.querySelector('.error-message');
+        if (!$(input).val().trim()) {
+            error.show();
+            $(input).addClass("error-border");
+            return false;
+        }
 
-    if (input.value.trim() === "") {
-        error.style.display = "block";
-        input.classList.add("error-border");
-        return false
+        error.hide();
+        $(input).removeClass("error-border");
+        return true;
     }
 
-    error.style.display = "none";
-    input.classList.remove("error-border");
-    return true;
-}
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    let allValid = true;
+    // Blur event
+    inputs.on('blur', function () {
+        validateField(this);
+    });
 
-    inputs.forEach(input => {
-        if (!validataField(input)) {
-            allValid = false;
+    // ENTER — yalnız aktiv input-u yoxla və növbətiyə keç
+    $(document).on("keyup", function (e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+
+            let active = document.activeElement;
+            let index = inputs.index(active);
+
+            if (index !== -1) {
+                let isValid = validateField(active);
+
+                if (isValid && inputs[index + 1]) {
+                    inputs[index + 1].focus();
+                }
+            }
         }
     });
 
-    if (allValid) {
-        console.log("Form is Valid!")
-    }
-})
+    // SUBMIT — bütün input-ları yoxla
+    $('#contact-form').on("submit", function (e) {
+        e.preventDefault();
 
+        let allValid = true;
 
+        inputs.each(function () {
+            if (!validateField(this)) {
+                allValid = false;
+            }
+        });
 
+        if (allValid) {
+            console.log("Form is valid!");
+        }
+    });
+
+});
