@@ -357,6 +357,11 @@ body .imgbox img {
 #touch #contact-form .input-box input.error-border {
   border: 1px solid red !important;
 }
+#touch #contact-form .input-box input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #e775bb;
+  border-color: #ff0000;
+}
 #touch #contact-form .input-box .error-message {
   color: red;
   font-size: 13px;
@@ -365,6 +370,12 @@ body .imgbox img {
 #touch #contact-form textarea {
   border-radius: 7px;
   margin-top: 7px;
+  padding-left: 10px;
+}
+#touch #contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #e775bb;
+  border-color: #ff0000;
 }
 #touch #contact-form button {
   padding: 1.25rem 14.25rem;
