@@ -10,6 +10,30 @@ function toggleMenu() {
     }
 }
 
+// images
+let modal = document.getElementById("ïmgModal");
+let modalImg = document.getElementById("modalImg");
+let closeBtn = document.querySelector(".close");
+let images = document.querySelectorAll(".portfolio-img");
+
+images.forEach(img => {
+    img.addEventListener("click", function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    });
+});
+
+closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+
+modal.addEventListener("click", function (e){
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+// form
 $(document).ready(function() {
 
     const form = $('#contact-form')[0];
