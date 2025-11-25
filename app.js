@@ -13,15 +13,15 @@ function toggleMenu() {
 // images
 // Open the Modal
 function openModal() {
-    document.getElementById("myModal").style.display = "block";
+    document.getElementById("myModal").classList.add("active");
 }
 
 // Close the Modal
 function closeModal() {
-    document.getElementById("myModal").style.display = "none";
+    document.getElementById("myModal").classList.remove("active");
 }
 
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -35,22 +35,31 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    // let dots = document.getElementsByClassName("demo");
+    // let captionText = document.getElementById("caption");
+    if (n > slides.length) { slideIndex = slides.length }
+    if (n < 1) { slideIndex = 1 }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
+    // for (i = 0; i < dots.length; i++) {
+    //     dots[i].className = dots[i].className.replace(" active", "");
+    // }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    captionText.innerHTML = dots[slideIndex - 1].alt;
+    // dots[slideIndex - 1].className += " active";
+    // captionText.innerHTML = dots[slideIndex - 1].alt;
 }
+
+const portfolioimages = document.querySelectorAll(".portfolio-box .imgbox img")
+
+    portfolioimages.forEach((Img, index) => {
+        Img.addEventListener("click", () => {
+            openModal();
+            currentSlide(index +1);
+        })
+    });
 
 // form
 $(document).ready(function () {
