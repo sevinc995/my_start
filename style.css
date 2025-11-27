@@ -298,7 +298,7 @@ body .imgbox img {
 #images .modal {
   display: none;
   position: fixed;
-  z-index: 20;
+  z-index: 999999;
   padding-top: 80px;
   left: 0;
   top: 0;
@@ -306,25 +306,23 @@ body .imgbox img {
   height: 100%;
   overflow: auto;
 }
-#images .modalactive {
-  display: block;
-}
 #images .modal .close {
-  position: absolute;
+  position: fixed;
   top: 25px;
   right: 45px;
-  color: white;
+  color: black;
   font-size: 40px;
   font-weight: 700;
   cursor: pointer;
-  transition: 0.3s;
+  z-index: 999999999;
 }
 #images .modal .close:hover {
   color: #ccc;
 }
 #images .modal .modal-content {
   position: relative;
-  max-width: 80%;
+  max-width: 900px;
+  width: 90%;
 }
 #images .modal .mySliders {
   display: none;
@@ -333,7 +331,6 @@ body .imgbox img {
 #images .modal .mySliders img {
   width: 80%;
   border-radius: 4px;
-  animation: fade 0.5s ease;
 }
 #images .modal .mySliders .numbertext {
   color: #f2f2f2;
@@ -343,8 +340,7 @@ body .imgbox img {
   top: 0;
   left: 0;
 }
-#images .prev,
-#images .next {
+#images .modal .prev, #images .modal .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -356,17 +352,29 @@ body .imgbox img {
           user-select: none;
   transition: 0.3s;
 }
-#images .prev:hover,
-#images .next:hover {
+#images .modal .prev:hover, #images .modal .next:hover {
   color: #bbb;
 }
-#images .prev {
+#images .modal .prev {
   left: 0;
 }
-#images .next {
+#images .modal .next {
   right: 0;
 }
-@keyframes fade {}
+#images .modal .caption-container {
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+#images .modal .thumbs img {
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#images .modal .thumbs img:hover {
+  opacity: 1;
+}
 
 #download {
   padding: 90px 0;

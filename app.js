@@ -1,5 +1,5 @@
 "use strict";
-
+// menu
 let menuList = document.getElementById("menuList");
 menuList.style.maxHeight = "0px";
 function toggleMenu() {
@@ -11,55 +11,49 @@ function toggleMenu() {
 }
 
 // images
-// Open the Modal
-function openModal() {
-    document.getElementById("myModal").classList.add("active");
-}
-
-// Close the Modal
-function closeModal() {
-    document.getElementById("myModal").classList.remove("active");
-}
 
 let slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/previous controls
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+    document.body.style.overflow = "hidden"; 
+    showSlides(slideIndex);
+}
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
-    let i;
+function showSlides (n) {
     let slides = document.getElementsByClassName("mySlides");
-    // let dots = document.getElementsByClassName("demo");
-    // let captionText = document.getElementById("caption");
-    if (n > slides.length) { slideIndex = slides.length }
-    if (n < 1) { slideIndex = 1 }
-    for (i = 0; i < slides.length; i++) {
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    for (let i = 0; i < slides.length; i ++)
         slides[i].style.display = "none";
-    }
-    // for (i = 0; i < dots.length; i++) {
-    //     dots[i].className = dots[i].className.replace(" active", "");
-    // }
+    for (let i = 0; i < dots.length; i++ );
+        dots[i].classList.remove("active");
+
     slides[slideIndex - 1].style.display = "block";
-    // dots[slideIndex - 1].className += " active";
-    // captionText.innerHTML = dots[slideIndex - 1].alt;
+    dots[slideIndex -1].classList.add("active");
+    captionText.innerHTML = dots[slideIndex -1].lastChild;
 }
 
-const portfolioimages = document.querySelectorAll(".portfolio-box .imgbox img")
-
-    portfolioimages.forEach((Img, index) => {
-        Img.addEventListener("click", () => {
-            openModal();
-            currentSlide(index +1);
-        })
-    });
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+});
 
 // form
 $(document).ready(function () {
