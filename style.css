@@ -307,38 +307,26 @@ body .imgbox img {
   overflow: auto;
 }
 #images .modal .close {
-  position: fixed;
+  position: absolute;
   top: 25px;
   right: 45px;
-  color: black;
+  color: white;
   font-size: 40px;
   font-weight: 700;
   cursor: pointer;
-  z-index: 999999999;
-}
-#images .modal .close:hover {
-  color: #ccc;
 }
 #images .modal .modal-content {
   position: relative;
   max-width: 900px;
-  width: 90%;
+  width: 70%;
 }
 #images .modal .mySliders {
   display: none;
   text-align: center;
 }
 #images .modal .mySliders img {
-  width: 80%;
+  width: 100%;
   border-radius: 4px;
-}
-#images .modal .mySliders .numbertext {
-  color: #f2f2f2;
-  font-size: 14px;
-  padding: 10px 16px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 #images .modal .prev, #images .modal .next {
   cursor: pointer;
@@ -363,6 +351,7 @@ body .imgbox img {
 }
 #images .modal .caption-container {
   text-align: center;
+  background: black;
   color: white;
   padding: 10px;
 }

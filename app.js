@@ -16,13 +16,13 @@ let slideIndex = 1;
 
 function openModal() {
     document.getElementById("myModal").style.display = "block";
-    document.body.style.overflow = "hidden"; 
+    // document.body.style.overflow = "hidden"; 
     showSlides(slideIndex);
 }
 
 function closeModal() {
     document.getElementById("myModal").style.display = "none";
-    document.body.style.overflow = "auto";
+    // document.body.style.overflow = "auto";
 }
 
 function plusSlides(n) {
@@ -38,8 +38,8 @@ function showSlides (n) {
     let dots = document.getElementsByClassName("demo");
     let captionText = document.getElementById("caption");
 
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1) slideIndex = slides.length;
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
 
     for (let i = 0; i < slides.length; i ++)
         slides[i].style.display = "none";
@@ -51,9 +51,9 @@ function showSlides (n) {
     captionText.innerHTML = dots[slideIndex -1].lastChild;
 }
 
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
-});
+// document.addEventListener("keydown", (e) => {
+//     if (e.key === "Escape") closeModal();
+// });
 
 // form
 $(document).ready(function () {
