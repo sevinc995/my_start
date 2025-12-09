@@ -260,7 +260,7 @@ body .imgbox img {
 }
 
 #images {
-  padding: 100px;
+  padding: 0;
 }
 #images .portfolio-box .imgbox {
   position: relative;
