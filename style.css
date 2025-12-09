@@ -260,7 +260,7 @@ body .imgbox img {
 }
 
 #images {
-  padding: 0;
+  padding: 100px;
 }
 #images .portfolio-box .imgbox {
   position: relative;
@@ -294,75 +294,6 @@ body .imgbox img {
   margin-top: 10px;
   font-size: 23px;
   color: white;
-}
-#images .modal {
-  display: none;
-  position: fixed;
-  z-index: 999999;
-  padding-top: 80px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-#images .modal .close {
-  position: absolute;
-  top: 25px;
-  right: 45px;
-  color: white;
-  font-size: 40px;
-  font-weight: 700;
-  cursor: pointer;
-}
-#images .modal .modal-content {
-  position: relative;
-  max-width: 900px;
-  width: 70%;
-}
-#images .modal .mySliders {
-  display: none;
-  text-align: center;
-}
-#images .modal .mySliders img {
-  width: 100%;
-  border-radius: 4px;
-}
-#images .modal .prev, #images .modal .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  padding: 16px;
-  color: white;
-  font-size: 24px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: 0.3s;
-}
-#images .modal .prev:hover, #images .modal .next:hover {
-  color: #bbb;
-}
-#images .modal .prev {
-  left: 0;
-}
-#images .modal .next {
-  right: 0;
-}
-#images .modal .caption-container {
-  text-align: center;
-  background: black;
-  color: white;
-  padding: 10px;
-}
-#images .modal .thumbs img {
-  width: 100%;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: 0.3s;
-}
-#images .modal .thumbs img:hover {
-  opacity: 1;
 }
 
 #download {
