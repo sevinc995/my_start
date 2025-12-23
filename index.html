@@ -136,78 +136,88 @@
             </div>
         </section>
 
-        <section id="images">
-            <div class="container-fluid px-0">
+        <section id="portfolio">
+            <div class="container-fluid p-0">
                 <div class="row g-0">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="portfolio-box">
-                            <div class="imgbox" onclick="openModal(); currentSlide(1)">
-                                <img src="assets/1.jpg" alt="">
-                                <div class="text">
-                                    <h3>CATEGORY</h3>
-                                    <h4>Project Name</h4>
-                                </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="imgbox">
+                            <!-- <div class="minibox"></div> -->
+                            <img class="myImg" src="assets/1.jpg" alt="Project Name">
+                            <div class="textbox">
+                                <h3>CATEGORY</h3>
+                                <h4>Project Name</h4>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="portfolio-box">
-                            <div class="imgbox" onclick="openModal(); currentSlide(2)">
-                                <img src="assets/2.jpg" alt="">
-                                <div class="text">
-                                    <h3>CATEGORY</h3>
-                                    <h4>Project Name</h4>
-                                </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="imgbox">
+                            <!-- <div class="minibox"></div> -->
+                            <img class="myImg" src="assets/2.jpg" alt="Project Name">
+                            <div class="textbox">
+                                <h3>CATEGORY</h3>
+                                <h4>Project Name</h4>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="portfolio-box">
-                            <div class="imgbox" onclick="openModal(); currentSlide(3)">
-                                <img src="assets/3.jpg" alt="">
-                                <div class="text">
-                                    <h3>CATEGORY</h3>
-                                    <h4>Project Name</h4>
-                                </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="imgbox">
+                            <div class="minibox"></div>
+                            <img class="myImg" src="assets/3.jpg" alt="Project Name">
+                            <div class="textbox">
+                                <h3>CATEGORY</h3>
+                                <h4>Project Name</h4>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="portfolio-box">
-                            <div class="imgbox" onclick="openModal(); currentSlide(4)">
-                                <img src="assets/4.jpg" alt="">
-                                <div class="text">
-                                    <h3>CATEGORY</h3>
-                                    <h4>Project Name</h4>
-                                </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="imgbox">
+                            <div class="minibox"></div>
+                            <img class="myImg" src="assets/4.jpg" alt="Project Name">
+                            <div class="textbox">
+                                <h3>CATEGORY</h3>
+                                <h4>Project Name</h4>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="portfolio-box">
-                            <div class="imgbox" onclick="openModal(); currentSlide(5)">
-                                <img src="assets/5.jpg" alt="">
-                                <div class="text">
-                                    <h3>CATEGORY</h3>
-                                    <h4>Project Name</h4>
-                                </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="imgbox">
+                            <div class="minibox"></div>
+                            <img class="myImg" src="assets/5.jpg" alt="Project Name">
+                            <div class="textbox">
+                                <h3>CATEGORY</h3>
+                                <h4>Project Name</h4>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="portfolio-box">
-                            <div class="imgbox" onclick="openModal(); currentSlide(6)">
-                                <img src="assets/6.jpg" alt="">
-                                <div class="text">
-                                    <h3>CATEGORY</h3>
-                                    <h4>Project Name</h4>
-                                </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="imgbox">
+                            <div class="minibox"></div>
+                            <img class="myImg" src="assets/6.jpg" alt="Project Name">
+                            <div class="textbox">
+                                <h3>CATEGORY</h3>
+                                <h4>Project Name</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- prev next -->
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+
+            <!-- Modal Caption (Image Text) -->
+            <div class="caption"></div>
+        </div>
 
 
         <section id="download">
@@ -274,7 +284,17 @@
         </section>
     </main>
     <footer>
-
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="textbox text-center">
+                            <span style="color: #8b8b8b;">Copyright &#169; 2023 - Company Name</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </footer>
 </body>
 
