@@ -122,7 +122,6 @@ body .imgbox img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 570px;
 }
 #favorite .textbox h1 {
   margin-top: 30px;
@@ -189,7 +188,6 @@ body .imgbox img {
   padding: 90px 0 0 0;
 }
 #youneed .textbox {
-  max-width: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,42 +219,6 @@ body .imgbox img {
   color: #000;
   font-size: 16px;
   font-weight: 700;
-}
-
-#service {
-  padding: 90px 0;
-}
-#service .textbox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#service .textbox h1 {
-  font-size: 43px;
-  font-weight: 500;
-}
-#service .textbox hr {
-  width: 50px;
-  height: 2px;
-  background-color: #f4623a;
-  margin-top: 30px;
-}
-#service .box-icon {
-  margin: 50px 0;
-}
-#service .box-icon .icon i {
-  font-size: 35px;
-  color: #f4623a;
-}
-#service .box-icon h2 {
-  font-size: 24px;
-  font-weight: 500;
-  margin: 20px 0;
-}
-#service .box-icon h4 {
-  font-size: 19px;
-  line-height: 1.3;
-  color: #8b8b8b;
 }
 
 #portfolio .imgbox {
@@ -393,33 +355,10 @@ body .imgbox img {
   width: 100%;
 }
 
-#download {
-  padding: 90px 0;
-  background-color: #212529;
-}
-#download .textbox {
-  margin: 30px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#download .textbox h1 {
-  font-size: 35px;
-  color: white;
-  margin-bottom: 30px;
-}
-#download .textbox .btn {
-  background-color: white;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-weight: 700;
-}
-
 #touch {
   padding: 90px 0;
 }
 #touch .textbox {
-  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -469,6 +408,8 @@ body .imgbox img {
   display: none;
 }
 #touch #contact-form textarea {
+  width: 500px;
+  height: 200px;
   border-radius: 7px;
   margin-top: 7px;
   padding-left: 10px;
