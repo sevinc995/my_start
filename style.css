@@ -155,17 +155,17 @@ body .imgbox img {
 }
 @media (max-width: 768px) {
   #favorite .textbox {
-    padding: 20px 0;
+    padding: 0;
   }
   #favorite .textbox h1 {
     font-size: 35px;
     margin-top: 20px;
   }
   #favorite .textbox h3 {
-    font-size: 18px;
+    font-size: 17px;
   }
   #favorite .textbox hr {
-    margin: 20px;
+    margin: 15px;
     line-height: 1.3;
   }
   #favorite .textbox .btn {
@@ -174,15 +174,15 @@ body .imgbox img {
 }
 @media (max-width: 586px) {
   #favorite .textbox {
-    padding: 9px 0;
+    padding: 0;
   }
   #favorite .textbox h1 {
     font-size: 25px;
     margin-top: 15px;
   }
   #favorite .textbox h3 {
-    font-size: 17px;
-    line-height: 1.3;
+    font-size: 16px;
+    line-height: 1.2;
   }
   #favorite .textbox hr {
     margin: 15px;
@@ -198,6 +198,7 @@ body .imgbox img {
   padding: 90px 0 0 0;
 }
 #youneed .textbox {
+  padding: 50px 0;
   max-width: 650px;
   display: flex;
   flex-direction: column;
@@ -207,7 +208,6 @@ body .imgbox img {
   font-size: 45px;
   font-weight: 700;
   color: white;
-  margin-top: 50px;
 }
 #youneed .textbox hr {
   width: 50px;
@@ -233,33 +233,30 @@ body .imgbox img {
 }
 @media (max-width: 768px) {
   #youneed .textbox {
-    padding: 20px 10px;
+    padding: 40px 0;
   }
   #youneed .textbox h1 {
     font-size: 35px;
-    margin-top: 20px;
   }
   #youneed .textbox h3 {
-    font-size: 18px;
+    font-size: 17px;
   }
   #youneed .textbox .btn {
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 586px) {
-  #youneed .textbox {
-    padding: 9px 5px;
-  }
   #youneed .textbox h1 {
     font-size: 25px;
     margin-top: 15px;
   }
   #youneed .textbox h3 {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.3;
   }
   #youneed .textbox .btn {
-    margin: 15px;
+    margin-bottom: 15px;
     padding: 10px 20px;
   }
 }
@@ -303,240 +300,21 @@ body .imgbox img {
   #service .textbox {
     padding: 15px 20px;
   }
-}
-
-#portfolio .imgbox {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-#portfolio .imgbox:hover .textbox {
-  background-color: #f4623a;
-  opacity: 0.9;
-}
-#portfolio .imgbox .textbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  line-height: 1.5;
-  pointer-events: none;
-}
-#portfolio .imgbox .textbox h3 {
-  font-size: 17px;
-  color: rgba(255, 255, 255, 0.5019607843);
-}
-#portfolio .imgbox .textbox h4 {
-  font-size: 22px;
-  color: #fff;
-}
-#portfolio #myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-#portfolio #myImg:hover {
-  opacity: 0.7;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding-top: 80px;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.9019607843);
-}
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-.modal #caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-.modal .modal-content,
-.modal #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0);
+  #service .textbox h1 {
+    font-size: 30px;
   }
-  to {
-    transform: scale(1);
+  #service .box-icon h2 {
+    font-size: 21px;
+  }
+  #service .box-icon h4 {
+    font-size: 17px;
   }
 }
-.close {
-  position: absolute;
-  top: 55px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: 700;
-  transition: 0.3s;
-  pointer-events: auto;
-  z-index: 9999;
-  cursor: pointer;
-}
-.close:hover, .close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 30%;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 16px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-.prev {
-  left: 0;
-}
-.prev:hover {
-  color: #ccc;
-}
-
-.next {
-  right: 0;
-}
-.next:hover {
-  color: #ccc;
-}
-
-.modal-content {
-  width: 100%;
-}
-
-#download {
-  padding: 90px 0;
-  background-color: #212529;
-}
-#download .textbox {
-  margin: 30px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#download .textbox h1 {
-  font-size: 35px;
-  color: white;
-  margin-bottom: 30px;
-}
-#download .textbox .btn {
-  background-color: white;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-weight: 700;
-}
-
-#touch {
-  padding: 90px 0;
-}
-#touch .textbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#touch .textbox h1 {
-  font-size: 35px;
-}
-#touch .textbox hr {
-  margin: 40px;
-  width: 50px;
-  height: 2px;
-  background-color: #f4623a;
-}
-#touch .textbox h3 {
-  color: #8b8b8b;
-  font-size: 19px;
-  font-weight: 100;
-  line-height: 1.4;
-}
-#touch #contact-form {
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#touch #contact-form .input-box input {
-  border: 0.5px solid #8b8b8b;
-  width: 500px;
-  height: 50px;
-  margin: 7px 0;
-  border-radius: 7px;
-  transition: 2s;
-}
-#touch #contact-form .input-box input.error-border {
-  border: 1px solid red !important;
-}
-#touch #contact-form .input-box input:focus {
-  outline: none;
-  box-shadow: 0 0 8px #e775bb;
-  border-color: #ff0000;
-}
-#touch #contact-form .input-box .error-message {
-  color: red;
-  font-size: 13px;
-  display: none;
-}
-#touch #contact-form textarea {
-  width: 500px;
-  height: 200px;
-  border-radius: 7px;
-  margin-top: 7px;
-  padding-left: 10px;
-}
-#touch #contact-form textarea:focus {
-  outline: none;
-  box-shadow: 0 0 8px #e775bb;
-  border-color: #ff0000;
-}
-#touch #contact-form button {
-  padding: 1.25rem 14.25rem;
-  background-color: #f4623a;
-  opacity: 0.7;
-  border-radius: 30px;
-  margin-top: 20px;
-  color: white;
-  font-size: 17px;
-  font-weight: 600;
-}
-#touch #contact-form .icon {
-  font-size: 35px;
-  color: #8b8b8b;
-  margin: 40px 0 20px 0;
+@media (max-width: 586px) {
+  #service .box-icon h2 {
+    font-size: 20px;
+  }
+  #service .box-icon h4 {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
