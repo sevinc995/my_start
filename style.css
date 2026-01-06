@@ -113,7 +113,7 @@ body .imgbox img {
   background-size: cover;
   background-repeat: no-repeat;
   filter: sepia(90%) brightness(70%) invert(25%);
-  height: 100vh;
+  min-height: 100vh;
   z-index: 0;
 }
 #favorite .textbox {
