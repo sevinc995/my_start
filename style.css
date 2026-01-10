@@ -463,27 +463,4 @@ body .imgbox img {
   position: absolute;
   top: 30px;
   right: 35px;
-}
-
-#download {
-  padding: 90px 0;
-  background-color: #212529;
-}
-#download .textbox {
-  margin: 30px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#download .textbox h1 {
-  text-align: center;
-  font-size: 35px;
-  color: white;
-  margin-bottom: 30px;
-}
-#download .textbox .btn {
-  background-color: white;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
