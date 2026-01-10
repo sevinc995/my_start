@@ -463,4 +463,113 @@ body .imgbox img {
   position: absolute;
   top: 30px;
   right: 35px;
+}
+
+#download {
+  padding: 90px 0;
+  background-color: #212529;
+}
+#download .textbox {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#download .textbox h1 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  margin-bottom: 30px;
+}
+#download .textbox .btn {
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .textbox h1 {
+    font-size: 25px;
+  }
+  .textbox .btn {
+    padding: 12px 25px;
+  }
+}
+#touch {
+  padding: 90px 0;
+}
+#touch .textbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#touch .textbox h1 {
+  font-size: 35px;
+}
+#touch .textbox hr {
+  margin: 40px;
+  width: 50px;
+  height: 2px;
+  background-color: #f4623a;
+}
+#touch .textbox h3 {
+  color: #8b8b8b;
+  font-size: 19px;
+  font-weight: 100;
+  line-height: 1.4;
+}
+#touch #contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#touch #contact-form .input-box input {
+  border: 0.5px solid #8b8b8b;
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  margin: 7px 0;
+  border-radius: 7px;
+  transition: 2s;
+}
+#touch #contact-form .input-box input.error-border {
+  border: 1px solid red !important;
+}
+#touch #contact-form .input-box input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #e775bb;
+  border-color: #ff0000;
+}
+#touch #contact-form .input-box .error-message {
+  color: red;
+  font-size: 13px;
+  display: none;
+}
+#touch #contact-form textarea {
+  border-radius: 7px;
+  margin-top: 7px;
+  padding-left: 10px;
+}
+#touch #contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #e775bb;
+  border-color: #ff0000;
+}
+#touch #contact-form button {
+  padding: 1.25rem 14.25rem;
+  background-color: #f4623a;
+  opacity: 0.7;
+  border-radius: 30px;
+  margin-top: 20px;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+}
+#touch #contact-form .icon {
+  font-size: 35px;
+  color: #8b8b8b;
+  margin: 40px 0 20px 0;
 }/*# sourceMappingURL=style.css.map */
