@@ -7,8 +7,7 @@ body .imgbox img {
 }
 
 .box {
-  width: 100vw;
-  position: absolute;
+  width: 100%;
   position: fixed;
   left: 0;
   top: 0;
@@ -32,7 +31,7 @@ body .imgbox img {
 }
 .box nav ul {
   display: flex;
-  gap: 30;
+  gap: 30px;
 }
 .box nav ul li {
   list-style-type: none;
@@ -53,7 +52,6 @@ body .imgbox img {
   color: white;
   font-size: 30px;
 }
-
 @media (max-width: 768px) {
   .box {
     background-color: white;
@@ -74,7 +72,7 @@ body .imgbox img {
     flex-direction: column;
     background-color: white;
     gap: 0;
-    transition: all 3s;
+    transition: all 1s;
   }
   .box nav ul li {
     padding: 20px;
@@ -92,10 +90,11 @@ body .imgbox img {
   }
 }
 @media (max-width: 586px) {
-  .box nav {
+  .box .box nav {
     padding: 10px 30px;
   }
 }
+
 #favorite {
   background: none;
   position: relative;
@@ -449,22 +448,21 @@ body .imgbox img {
   color: #ccc;
 }
 
-.modal-content {
-  width: 100%;
+@media (max-width: 768px) {
+  .modal-content {
+    width: 100%;
+  }
+  .modal {
+    position: fixed;
+    top: 50px;
+    left: 0;
+  }
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+  }
 }
-
-.modal {
-  position: fixed;
-  top: 80px;
-  left: 0;
-}
-
-.close {
-  position: absolute;
-  top: 30px;
-  right: 35px;
-}
-
 #download {
   padding: 90px 0;
   background-color: #212529;
@@ -487,19 +485,20 @@ body .imgbox img {
   border-radius: 30px;
   font-weight: 700;
 }
-
 @media (max-width: 768px) {
-  .textbox h1 {
+  #download .textbox h1 {
     font-size: 25px;
   }
-  .textbox .btn {
+  #download .textbox .btn {
     padding: 12px 25px;
   }
 }
+
 #touch {
   padding: 90px 0;
 }
 #touch .textbox {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -521,55 +520,91 @@ body .imgbox img {
   line-height: 1.4;
 }
 #touch #contact-form {
+  width: 100%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#touch #contact-form .input-box input {
-  border: 0.5px solid #8b8b8b;
+#touch #contact-form .input-box {
   width: 100%;
   max-width: 500px;
-  height: 50px;
   margin: 7px 0;
+  display: flex;
+  flex-direction: column;
+}
+#touch #contact-form .input-box input,
+#touch #contact-form .input-box textarea {
+  width: 100%;
+  border: 0.5px solid #8b8b8b;
   border-radius: 7px;
-  transition: 2s;
+  padding: 12px;
+  font-size: 15px;
+  transition: box-shadow 0.3s ease, border-color 0.3 ease;
 }
-#touch #contact-form .input-box input.error-border {
-  border: 1px solid red !important;
-}
-#touch #contact-form .input-box input:focus {
+#touch #contact-form .input-box input:focus,
+#touch #contact-form .input-box textarea:focus {
   outline: none;
   box-shadow: 0 0 8px #e775bb;
   border-color: #ff0000;
 }
+#touch #contact-form .input-box input.error-border,
+#touch #contact-form .input-box textarea.error-border {
+  border-color: red !important;
+}
+#touch #contact-form .input-box input {
+  height: 50px;
+}
+#touch #contact-form .input-box textarea {
+  height: 150px;
+  resize: none;
+}
 #touch #contact-form .input-box .error-message {
+  maegin-top: 3px;
   color: red;
   font-size: 13px;
   display: none;
 }
-#touch #contact-form textarea {
-  border-radius: 7px;
-  margin-top: 7px;
-  padding-left: 10px;
-}
-#touch #contact-form textarea:focus {
-  outline: none;
-  box-shadow: 0 0 8px #e775bb;
-  border-color: #ff0000;
-}
 #touch #contact-form button {
-  padding: 1.25rem 14.25rem;
-  background-color: #f4623a;
-  opacity: 0.7;
-  border-radius: 30px;
   margin-top: 20px;
+  padding: 15px 60px;
+  background-color: #f4623a;
+  border-radius: 30px;
   color: white;
   font-size: 17px;
   font-weight: 600;
+  opacity: 0.7;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 #touch #contact-form .icon {
   font-size: 35px;
   color: #8b8b8b;
   margin: 40px 0 20px 0;
+}
+@media (max-width: 768px) {
+  #touch {
+    padding: 60px 20px;
+  }
+  #touch .textbox h1 {
+    font-size: 28px;
+  }
+  #touch .textbox hr {
+    margin: 25px;
+  }
+  #touch .textbox h3 {
+    font-size: 17px;
+  }
+  #touch #contact-form {
+    margin-top: 20px;
+  }
+  #touch #contact-form .input-box {
+    max-width: 100%;
+  }
+  #touch #contact-form button {
+    width: 100%;
+    max-width: 280px;
+  }
 }/*# sourceMappingURL=style.css.map */

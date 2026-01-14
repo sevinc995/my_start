@@ -1,7 +1,7 @@
 #touch
     padding: 90px 0
     .textbox
-        // max-width: 500px
+        width: 100%
         display: flex
         flex-direction: column
         justify-content: center
@@ -19,52 +19,71 @@
             font-weight: 100
             line-height: 1.4
     #contact-form
-        // max-width: 500px
+        width: 100%
+        max-width: 500px
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
         .input-box
-            input
-                border: 0.5px solid #8b8b8b
+            width: 100%
+            max-width: 500px
+            margin: 7px 0
+            display: flex
+            flex-direction: column
+            input,
+            textarea
                 width: 100%
-                max-width: 500px
-                height: 50px
-                margin: 7px 0
-                border-radius: 7px
-                transition: 2s
+                border: 0.5px solid #8b8b8b
+                border-radius: 7px 
+                padding: 12px
+                font-size: 15px
+                transition: box-shadow .3s ease, border-color .3 ease
+                &:focus
+                    outline: none
+                    box-shadow: 0 0 8px #e775bb
+                    border-color: #ff0000 
                 &.error-border
-                    border: 1px solid red !important
-            input:focus
-                outline: none
-                box-shadow: 0 0 8px #e775bb
-                border-color: #ff0000
+                    border-color: red !important
+            input
+                height: 50px
+            textarea
+                height: 150px
+                resize: none
             .error-message
+                maegin-top: 3px
                 color: red
                 font-size: 13px
                 display: none
-        textarea
-            // width: 100%
-            // max-width: 500px
-            // height: 200px
-            border-radius: 7px
-            margin-top: 7px
-            padding-left: 10px
-        textarea:focus
-            outline: none
-            box-shadow: 0 0 8px #e775bb
-            border-color: #ff0000
         button
-            padding: 1.25rem 14.25rem
-            background-color: #f4623a
-            opacity: 0.7
-            border-radius: 30px
             margin-top: 20px
+            padding: 15px 60px
+            background-color: #f4623a
+            border-radius: 30px
             color: #ffff
             font-size: 17px
             font-weight: 600
+            opacity: 0.7
+            border: none
+            cursor: pointer
+            transition: opacity .3s ease
         .icon
             font-size: 35px
             color: #8b8b8b
             margin: 40px 0 20px 0
-
+    @media (max-width: 768px)
+        padding: 60px 20px
+        .textbox
+            h1
+                font-size: 28px
+            hr
+                margin: 25px
+            h3
+                font-size: 17px
+        #contact-form
+            margin-top: 20px
+            .input-box
+                max-width: 100%
+            button
+                width: 100%
+                max-width: 280px
