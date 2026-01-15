@@ -12,6 +12,15 @@ body .imgbox img {
   left: 0;
   top: 0;
   z-index: 10;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.box.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.box.scrolled nav h2 {
+  color: #000;
 }
 .box nav {
   padding: 10px 90px;
@@ -25,6 +34,7 @@ body .imgbox img {
   color: #c5c1be;
   font-size: 20px;
   font-weight: 600;
+  transition: color 0.3s;
 }
 .box nav h2:hover {
   color: #fdfdfd;
@@ -546,8 +556,8 @@ body .imgbox img {
 #touch #contact-form .input-box input:focus,
 #touch #contact-form .input-box textarea:focus {
   outline: none;
-  box-shadow: 0 0 8px #e775bb;
-  border-color: #ff0000;
+  box-shadow: 0 0 8px #fa28ef;
+  border-color: #f78869;
 }
 #touch #contact-form .input-box input.error-border,
 #touch #contact-form .input-box textarea.error-border {
@@ -561,7 +571,7 @@ body .imgbox img {
   resize: none;
 }
 #touch #contact-form .input-box .error-message {
-  maegin-top: 3px;
+  margin-top: 3px;
   color: red;
   font-size: 13px;
   display: none;

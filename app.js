@@ -10,6 +10,15 @@ function toggleMenu() {
     }
 }
 
+// scroll
+$(window).on("scroll", function () {
+    if ($(window).scrollTop() > 50) {
+        $('.box').addClass('scrolled');
+    } else {
+        $('.box').removeClass('scrolled');
+    }
+});
+
 // images
 var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
@@ -55,11 +64,73 @@ document.querySelector(".next").onclick = function () {
 };
 
 
-// form
+// // form
+// $(document).ready(function () {
+
+//     const form = $('#contact-form')[0];
+//     const inputs = $('#contact-form input, #contact-form textarea');
+
+//     function validateField(input) {
+//         const parent = $(input).closest('.input-box');
+//         const error = parent.find('.error-message');
+
+//         if (!$(input).val().trim()) {
+//             error.show();
+//             $(input).addClass("error-border");
+//             return false;
+//         }
+
+//         error.hide();
+//         $(input).removeClass("error-border");
+//         return true;
+//     }
+
+//     // Blur event
+//     inputs.on('blur', function () {
+//         validateField(this);
+//     });
+
+//     // ENTER — yalnız aktiv input-u yoxla və növbətiyə keç
+//     $('#contact-form').on("keyup", function (e) {
+//         if (e.key === "Enter" && e.target.tagName !=="TEXTAREA") {
+//             e.preventDefault();
+
+//             let active = document.activeElement;
+//             let index = inputs.index(active);
+
+//             if (index !== -1) {
+//                 let isValid = validateField(active);
+
+//                 if (isValid && inputs[index + 1]) {
+//                     inputs[index + 1].focus();
+//                 }
+//             }
+//         }
+//     });
+
+//     // SUBMIT — bütün input-ları yoxla
+//     $('#contact-form').on("submit", function (e) {
+//         e.preventDefault();
+
+//         let allValid = true;
+
+//         inputs.each(function () {
+//             if (!validateField(this)) {
+//                 allValid = false;
+//             }
+//         });
+
+//         if (allValid) {
+//             console.log("Form is valid!");
+//         }
+//     });
+
+// });
+
 $(document).ready(function () {
 
     const form = $('#contact-form')[0];
-    const inputs = $('#contact-form input');
+    const inputs = $('#contact-form input, #contact-form textarea');
 
     function validateField(input) {
         const parent = $(input).closest('.input-box');
@@ -76,30 +147,29 @@ $(document).ready(function () {
         return true;
     }
 
-    // Blur event
+    // blur → tək-tək yoxla
     inputs.on('blur', function () {
         validateField(this);
     });
 
-    // ENTER — yalnız aktiv input-u yoxla və növbətiyə keç
-    $(document).on("keyup", function (e) {
+    inputs.on('keydown', function (e) {
+
+        // TEXTAREA → enter sərbəstdir
+        if (this.tagName === "TEXTAREA") return;
+
         if (e.key === "Enter") {
             e.preventDefault();
 
-            let active = document.activeElement;
-            let index = inputs.index(active);
+            let isValid = validateField(this);
+            let index = inputs.index(this);
 
-            if (index !== -1) {
-                let isValid = validateField(active);
-
-                if (isValid && inputs[index + 1]) {
-                    inputs[index + 1].focus();
-                }
+            if (isValid && inputs[index + 1]) {
+                inputs[index + 1].focus();
             }
         }
     });
 
-    // SUBMIT — bütün input-ları yoxla
+    // SUBMIT → yalnız düymə ilə
     $('#contact-form').on("submit", function (e) {
         e.preventDefault();
 

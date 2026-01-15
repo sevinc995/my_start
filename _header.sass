@@ -1,11 +1,17 @@
 .box
     width: 100%
     position: fixed
-    // background-color: #ffff
     left: 0
     top: 0
     z-index: 10
-    // padding: 0 65px
+    background-color: transparent
+    transition: all 0.3s ease
+    &.scrolled
+        background-color: #ffff
+        box-shadow: 0 2px 10px rgba(0,0,0,.1)
+        nav
+            h2
+                color: #000
     nav
         padding: 10px 90px
         display: flex
@@ -17,13 +23,12 @@
             color: #c5c1be
             font-size: 20px
             font-weight: 600
+            transition: color .3s
             &:hover
                 color: #fdfdfd
         ul
             display: flex
-            // flex-direction: row
             gap: 30px
-            // padding: 15px
             li
                 list-style-type: none
                 a
